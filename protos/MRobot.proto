@@ -1,0 +1,1112 @@
+#VRML_SIM R2025a utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the MyRobot
+# Extracted from: /home/sj/robot/robot.urdf
+
+PROTO MyRobot [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "MyRobot"  # Is `Robot.name`.
+  field  SFString    controller      "void"     # Is `Robot.controller`.
+  field  MFString    controllerArgs  []         # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""         # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE      # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE       # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE      # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+ 
+    children [
+      Pose {
+        translation -0.015500 -0.000000 0.034500
+        rotation 0.000000 0.000000 1.000000 1.570800
+        children [
+          Shape {
+            appearance DEF dummy_dc13_idle_material PBRAppearance {
+              baseColor 0.980392 0.713725 0.003922
+              roughness 1.000000
+              metalness 0
+            }
+            geometry DEF dummy_dc13_idle Mesh {
+              url "assets/dummy_dc13_idle.stl"
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.015500 0.000000 0.034500
+        rotation 0.000000 0.000000 1.000000 1.570800
+        children [
+          Shape {
+            appearance DEF part_2_material PBRAppearance {
+              baseColor 0.615686 0.811765 0.929412
+              roughness 1.000000
+              metalness 0
+            }
+            geometry DEF part_2 Mesh {
+              url "assets/part_2.stl"
+            }
+          }
+        ]
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000003 -1.000000
+          anchor -0.015500 -0.000000 0.059000
+        }
+        device [
+          RotationalMotor {
+            name "joint_1"
+            maxVelocity 10.0
+            minPosition -1.64104
+            maxPosition 1.50055
+            maxTorque 10.0
+          }
+          PositionSensor {
+            name "joint_1_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.015500 -0.000000 0.059000
+          rotation 0.000001 1.000000 0.000001 3.141593
+          children [
+            Pose {
+              translation 0.000000 -0.000000 0.024500
+              rotation -0.681841 -0.731500 0.000001 3.141591
+              children [
+                Shape {
+                  appearance DEF part_3_material PBRAppearance {
+                    baseColor 0.647059 0.647059 0.647059
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF part_3 Mesh {
+                    url "assets/part_3.stl"
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0.000000 -0.000000 0.024500
+              rotation -0.681841 -0.731500 0.000001 3.141591
+              children [
+                Shape {
+                  appearance DEF dummy_dc13_idle_2_material PBRAppearance {
+                    baseColor 0.231373 0.380392 0.705882
+                    roughness 1.000000
+                    metalness 0
+                  }
+                  geometry DEF dummy_dc13_idle__2 Mesh {
+                    url "assets/dummy_dc13_idle__2.stl"
+                  }
+                }
+              ]
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.070191 -0.997534 -0.000004
+                anchor -0.001720 0.024440 -0.045828
+              }
+              device [
+                RotationalMotor {
+                  name "joint_2"
+                  maxVelocity 10.0
+                  minPosition -0.215989
+                  maxPosition 1.87841
+                  maxTorque 10.0
+                }
+                PositionSensor {
+                  name "joint_2_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation -0.001720 0.024440 -0.045828
+                rotation 0.998768 0.035095 0.035095 1.572033
+                children [
+                  Pose {
+                    translation 0.028161 -0.128449 0.024544
+                    rotation -0.614640 0.494401 0.614642 2.223278
+                    children [
+                      Shape {
+                        appearance DEF fr12_s102_k_material PBRAppearance {
+                          baseColor 0.647059 0.647059 0.647059
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF fr12_s102_k Mesh {
+                          url "assets/fr12_s102_k.stl"
+                        }
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.032661 -0.148961 0.004544
+                    rotation -0.994174 -0.107785 0.000000 3.141590
+                    children [
+                      Shape {
+                        appearance DEF dummy_dc12_material PBRAppearance {
+                          baseColor 0.917647 0.917647 0.917647
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF dummy_dc12 Mesh {
+                          url "assets/dummy_dc12.stl"
+                        }
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.029982 -0.136752 0.024544
+                    rotation -0.107164 0.988449 0.107164 1.582418
+                    children [
+                      Shape {
+                        appearance DEF part_2_2_material PBRAppearance {
+                          baseColor 0.615686 0.811765 0.929412
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF part_2__2 Mesh {
+                          url "assets/part_2__2.stl"
+                        }
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.000000 -0.000000 0.024500
+                    rotation 0.705037 0.076439 -0.705039 2.989012
+                    children [
+                      Shape {
+                        appearance DEF fr13_h101_k_material PBRAppearance {
+                          baseColor 0.768627 0.886275 0.952941
+                          roughness 1.000000
+                          metalness 0
+                        }
+                        geometry DEF fr13_h101_k Mesh {
+                          url "assets/fr13_h101_k.stl"
+                        }
+                      }
+                    ]
+                  }
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 0.000000 1.000000
+                      anchor 0.032661 -0.148961 0.005544
+                    }
+                    device [
+                      RotationalMotor {
+                        name "joint_3"
+                        maxVelocity 10.0
+                        minPosition -1.70606
+                        maxPosition 0.388333
+                        maxTorque 10.0
+                      }
+                      PositionSensor {
+                        name "joint_3_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.032661 -0.148961 0.005544
+                      rotation -0.000000 0.000000 -1.000000 0.172343
+                      children [
+                        Pose {
+                          translation 0.102500 0.000000 0.019000
+                          rotation 0.707105 0.000001 -0.707108 3.141591
+                          children [
+                            Shape {
+                              appearance DEF part_2_3_material PBRAppearance {
+                                baseColor 0.917647 0.917647 0.917647
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF part_2__3 Mesh {
+                                url "assets/part_2__3.stl"
+                              }
+                            }
+                          ]
+                        }
+                        Pose {
+                          translation 0.123500 0.000000 -0.001000
+                          rotation 0.707105 0.707108 0.000001 3.141591
+                          children [
+                            Shape {
+                              appearance DEF dummy_dc12_2_material PBRAppearance {
+                                baseColor 0.917647 0.917647 0.917647
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry USE dummy_dc12
+                            }
+                          ]
+                        }
+                        Pose {
+                          translation -0.000000 0.000000 0.019000
+                          rotation 0.577350 0.577350 -0.577352 2.094399
+                          children [
+                            Shape {
+                              appearance DEF fr12_h101_k_material PBRAppearance {
+                                baseColor 0.231373 0.380392 0.705882
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry DEF fr12_h101_k Mesh {
+                                url "assets/fr12_h101_k.stl"
+                              }
+                            }
+                          ]
+                        }
+                        Pose {
+                          translation 0.102500 0.000000 0.019000
+                          rotation 0.707105 0.000001 -0.707108 3.141591
+                          children [
+                            Shape {
+                              appearance DEF fr12_s102_k_2_material PBRAppearance {
+                                baseColor 0.647059 0.647059 0.647059
+                                roughness 1.000000
+                                metalness 0
+                              }
+                              geometry USE fr12_s102_k
+                            }
+                          ]
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.000000 0.000000 1.000000
+                            anchor 0.123500 0.000000 -0.000000
+                          }
+                          device [
+                            RotationalMotor {
+                              name "joint_4"
+                              maxVelocity 10.0
+                              minPosition -1.73961
+                              maxPosition 0.354782
+                              maxTorque 10.0
+                            }
+                            PositionSensor {
+                              name "joint_4_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.123500 0.000000 -0.000000
+                            children [
+                              Pose {
+                                translation 0.029734 0.055795 0.018825
+                                rotation 0.496008 -0.712706 0.496010 1.903191
+                                children [
+                                  Shape {
+                                    appearance DEF j4_j5_mirrored_material PBRAppearance {
+                                      baseColor 0.537255 0.854902 0.827451
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF j4_j5_mirrored Mesh {
+                                      url "assets/j4_j5_mirrored.stl"
+                                    }
+                                  }
+                                ]
+                              }
+                              Pose {
+                                translation 0.029734 0.055795 -0.027075
+                                rotation 0.496008 -0.712706 0.496010 1.903191
+                                children [
+                                  Shape {
+                                    appearance DEF j4_j5_mirrored_2_material PBRAppearance {
+                                      baseColor 0.537255 0.854902 0.827451
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry DEF j4_j5_mirrored__2 Mesh {
+                                      url "assets/j4_j5_mirrored__2.stl"
+                                    }
+                                  }
+                                ]
+                              }
+                              Pose {
+                                translation 0.029734 0.055795 0.018950
+                                rotation -0.496008 0.712706 0.496010 1.903191
+                                children [
+                                  Shape {
+                                    appearance DEF dummy_dc12_3_material PBRAppearance {
+                                      baseColor 0.917647 0.917647 0.917647
+                                      roughness 1.000000
+                                      metalness 0
+                                    }
+                                    geometry USE dummy_dc12
+                                  }
+                                ]
+                              }
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis -0.347387 -0.937722 -0.000004
+                                  anchor 0.029387 0.054858 0.018950
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "joint_5"
+                                    maxVelocity 10.0
+                                    minPosition -1.59462
+                                    maxPosition 1.54698
+                                    maxTorque 10.0
+                                  }
+                                  PositionSensor {
+                                    name "joint_5_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.029387 0.054858 0.018950
+                                  rotation -0.125761 -0.701494 0.701491 2.891385
+                                  children [
+                                    Pose {
+                                      rotation -0.698634 -0.715479 0.000001 3.141591
+                                      children [
+                                        Shape {
+                                          appearance DEF p01_05_base_material PBRAppearance {
+                                            baseColor 0.325490 0.317647 0.317647
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF p01_05_base Mesh {
+                                            url "assets/p01_05_base.stl"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                    Pose {
+                                      translation -0.000050 -0.000001 -0.000000
+                                      rotation -0.698634 -0.715479 0.000001 3.141591
+                                      children [
+                                        Shape {
+                                          appearance DEF p01_07_body_material PBRAppearance {
+                                            baseColor 0.325490 0.317647 0.317647
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF p01_07_body Mesh {
+                                            url "assets/p01_07_body.stl"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                    Pose {
+                                      translation 0.000050 0.000001 -0.000000
+                                      rotation -0.698634 -0.715479 0.000001 3.141591
+                                      children [
+                                        Shape {
+                                          appearance DEF p01_06_body_motor_material PBRAppearance {
+                                            baseColor 0.325490 0.317647 0.317647
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF p01_06_body_motor Mesh {
+                                            url "assets/p01_06_body_motor.stl"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                    Pose {
+                                      translation -0.023449 0.026949 -0.092650
+                                      rotation 0.999929 0.011910 0.000000 3.141590
+                                      children [
+                                        Shape {
+                                          appearance DEF dummy_dc12_4_material PBRAppearance {
+                                            baseColor 0.917647 0.917647 0.917647
+                                            roughness 1.000000
+                                            metalness 0
+                                          }
+                                          geometry DEF dummy_dc12__2 Mesh {
+                                            url "assets/dummy_dc12__2.stl"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis 0.999716 0.023824 -0.000003
+                                        anchor 0.003496 0.019089 -0.030000
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "joint_6"
+                                          maxVelocity 10.0
+                                          minPosition -0.488858
+                                          maxPosition 0.907405
+                                          maxTorque 10.0
+                                        }
+                                        PositionSensor {
+                                          name "joint_6_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation 0.003496 0.019089 -0.030000
+                                        rotation 0.662852 0.333058 0.670596 2.527323
+                                        children [
+                                          Pose {
+                                            translation -0.019000 0.030000 -0.003850
+                                            rotation 1.000000 -0.000000 0.000000 1.570800
+                                            children [
+                                              Shape {
+                                                appearance DEF p01_01_gearlink_motor_material PBRAppearance {
+                                                  baseColor 0.325490 0.317647 0.317647
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF p01_01_gearlink_motor Mesh {
+                                                  url "assets/p01_01_gearlink_motor.stl"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                        name "link6"
+                                        boundingObject Pose {
+                                          translation -0.019000 0.030000 -0.003850
+                                          rotation 1.000000 -0.000000 0.000000 1.570800
+                                          children [
+                                            USE p01_01_gearlink_motor
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.006597
+                                          centerOfMass [ -0.001481 -0.013111 -0.004460 ]
+                                          inertiaMatrix [
+                                            2.745000e-06 2.493600e-07 2.909280e-06
+                                            1.876170e-07 5.675000e-09 5.718400e-08
+                                          ]
+                                        }
+                                      }
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis -0.999716 -0.023821 -0.000004
+                                        anchor -0.003496 -0.019089 -0.030000
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "joint_6_mimic_gear"
+                                          maxVelocity 10.0
+                                          minPosition -3.141592653589793
+                                          maxPosition 3.141592653589793
+                                          maxTorque 10.0
+                                        }
+                                        PositionSensor {
+                                          name "joint_6_mimic_gear_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation -0.003496 -0.019089 -0.030000
+                                        rotation -0.568182 -0.581882 0.581879 2.108206
+                                        children [
+                                          Pose {
+                                            translation 0.033444 -0.011937 -0.003850
+                                            rotation -0.899024 -0.309642 0.309641 1.677045
+                                            children [
+                                              Shape {
+                                                appearance DEF p01_02_gearlink_material PBRAppearance {
+                                                  baseColor 0.325490 0.317647 0.317647
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF p01_02_gearlink Mesh {
+                                                  url "assets/p01_02_gearlink.stl"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                        name "link7"
+                                        boundingObject Pose {
+                                          translation 0.033444 -0.011937 -0.003850
+                                          rotation -0.899024 -0.309642 0.309641 1.677045
+                                          children [
+                                            USE p01_02_gearlink
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.006402
+                                          centerOfMass [ -0.007113 0.011666 -0.003884 ]
+                                          inertiaMatrix [
+                                            1.570520e-06 1.345610e-06 2.867350e-06
+                                            1.237000e-06 -8.300000e-11 -4.520000e-10
+                                          ]
+                                        }
+                                      }
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis 0.999716 0.023821 -0.000004
+                                        anchor 0.003651 0.012590 -0.055174
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "joint_6_mimic_L1"
+                                          maxVelocity 10.0
+                                          minPosition -3.141592653589793
+                                          maxPosition 3.141592653589793
+                                          maxTorque 10.0
+                                        }
+                                        PositionSensor {
+                                          name "joint_6_mimic_L1_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation 0.003651 0.012590 -0.055174
+                                        rotation 0.568182 0.581882 0.581879 2.108206
+                                        children [
+                                          Pose {
+                                            translation 0.074614 -0.075170 -0.003850
+                                            rotation 0.236627 -0.687027 -0.687024 2.676888
+                                            children [
+                                              Shape {
+                                                appearance DEF p01_03_link_material PBRAppearance {
+                                                  baseColor 0.325490 0.317647 0.317647
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry DEF p01_03_link Mesh {
+                                                  url "assets/p01_03_link.stl"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                          HingeJoint {
+                                            jointParameters HingeJointParameters {
+                                              axis -0.000002 0.000002 -1.000000
+                                              anchor 0.030790 -0.039395 -0.000000
+                                            }
+                                            device [
+                                              RotationalMotor {
+                                                name "joint_6_mimic_L3"
+                                                maxVelocity 10.0
+                                                minPosition -3.141592653589793
+                                                maxPosition 3.141592653589793
+                                                maxTorque 10.0
+                                              }
+                                              PositionSensor {
+                                                name "joint_6_mimic_L3_sensor"
+                                              }
+                                            ]
+                                            endPoint Solid {
+                                              translation 0.030790 -0.039395 -0.000000
+                                              rotation 0.325647 -0.945491 -0.000001 3.141592
+                                              children [
+                                                Pose {
+                                                  translation -0.047608 0.095313 0.004000
+                                                  rotation -0.236627 0.687027 -0.687024 2.676888
+                                                  children [
+                                                    Shape {
+                                                      appearance DEF p01_04_finger_material PBRAppearance {
+                                                        baseColor 0.325490 0.317647 0.317647
+                                                        roughness 1.000000
+                                                        metalness 0
+                                                      }
+                                                      geometry DEF p01_04_finger Mesh {
+                                                        url "assets/p01_04_finger.stl"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000000 0.000003 -1.000000
+                                                    anchor -0.020624 0.015832 0.000000
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "joint_6_mimic_L2"
+                                                      maxVelocity 10.0
+                                                      minPosition -3.141592653589793
+                                                      maxPosition 3.141592653589793
+                                                      maxTorque 10.0
+                                                    }
+                                                    PositionSensor {
+                                                      name "joint_6_mimic_L2_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation -0.020624 0.015832 0.000000
+                                                    rotation 0.000001 1.000000 0.000001 3.141593
+                                                    children [
+                                                      Pose {
+                                                        translation -0.019000 0.080000 -0.003850
+                                                        rotation 1.000000 -0.000000 0.000000 1.570800
+                                                        children [
+                                                          Shape {
+                                                            appearance DEF p01_01_gearlink_motor_2_material PBRAppearance {
+                                                              baseColor 0.325490 0.317647 0.317647
+                                                              roughness 1.000000
+                                                              metalness 0
+                                                            }
+                                                            geometry USE p01_01_gearlink_motor
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                    name "link6_2"
+                                                    boundingObject Pose {
+                                                      translation -0.019000 0.080000 -0.003850
+                                                      rotation 1.000000 -0.000000 0.000000 1.570800
+                                                      children [
+                                                        USE p01_01_gearlink_motor
+                                                      ]
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.006597
+                                                      centerOfMass [ -0.001481 0.036889 -0.004460 ]
+                                                      inertiaMatrix [
+                                                        2.745000e-06 2.493600e-07 2.909280e-06
+                                                        1.876170e-07 5.675000e-09 5.718400e-08
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                              name "link10"
+                                              boundingObject Pose {
+                                                translation -0.047608 0.095313 0.004000
+                                                rotation -0.236627 0.687027 -0.687024 2.676888
+                                                children [
+                                                  USE p01_04_finger
+                                                ]
+                                              }
+                                              physics Physics {
+                                                density -1
+                                                mass 0.016561
+                                                centerOfMass [ 0.018204 -0.009221 0.004000 ]
+                                                inertiaMatrix [
+                                                  3.284470e-06 6.325700e-06 8.887000e-06
+                                                  3.657180e-06 -0.000000e+00 0.000000e+00
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                        name "link9"
+                                        boundingObject Pose {
+                                          translation 0.074614 -0.075170 -0.003850
+                                          rotation 0.236627 -0.687027 -0.687024 2.676888
+                                          children [
+                                            USE p01_03_link
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.004111
+                                          centerOfMass [ 0.015395 -0.019698 -0.003850 ]
+                                          inertiaMatrix [
+                                            7.030970e-07 4.506990e-07 1.113420e-06
+                                            5.068750e-07 -0.000000e+00 -0.000000e+00
+                                          ]
+                                        }
+                                      }
+                                    }
+                                    HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis -0.999716 -0.023821 -0.000004
+                                        anchor -0.003651 -0.012590 -0.055174
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "joint_6_mimic_R1"
+                                          maxVelocity 10.0
+                                          minPosition -3.141592653589793
+                                          maxPosition 3.141592653589793
+                                          maxTorque 10.0
+                                        }
+                                        PositionSensor {
+                                          name "joint_6_mimic_R1_sensor"
+                                        }
+                                      ]
+                                      endPoint Solid {
+                                        translation -0.003651 -0.012590 -0.055174
+                                        rotation -0.568182 -0.581882 0.581879 2.108206
+                                        children [
+                                          Pose {
+                                            translation -0.054917 0.090565 -0.003850
+                                            rotation -0.236627 0.687027 -0.687024 2.676888
+                                            children [
+                                              Shape {
+                                                appearance DEF p01_03_link_2_material PBRAppearance {
+                                                  baseColor 0.325490 0.317647 0.317647
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                }
+                                                geometry USE p01_03_link
+                                              }
+                                            ]
+                                          }
+                                          HingeJoint {
+                                            jointParameters HingeJointParameters {
+                                              axis 0.000000 0.000003 -1.000000
+                                              anchor -0.030790 0.039395 -0.000000
+                                            }
+                                            device [
+                                              RotationalMotor {
+                                                name "joint_6_mimic_R3"
+                                                maxVelocity 10.0
+                                                minPosition -3.141592653589793
+                                                maxPosition 3.141592653589793
+                                                maxTorque 10.0
+                                              }
+                                              PositionSensor {
+                                                name "joint_6_mimic_R3_sensor"
+                                              }
+                                            ]
+                                            endPoint Solid {
+                                              translation -0.030790 0.039395 -0.000000
+                                              rotation 0.000001 1.000000 0.000001 3.141593
+                                              children [
+                                                Pose {
+                                                  translation -0.021182 -0.104415 0.004000
+                                                  rotation -1.000000 0.000000 0.000000 1.570800
+                                                  children [
+                                                    Shape {
+                                                      appearance DEF p01_04_finger_2_material PBRAppearance {
+                                                        baseColor 0.325490 0.317647 0.317647
+                                                        roughness 1.000000
+                                                        metalness 0
+                                                      }
+                                                      geometry USE p01_04_finger
+                                                    }
+                                                  ]
+                                                }
+                                                HingeJoint {
+                                                  jointParameters HingeJointParameters {
+                                                    axis 0.000002 0.000002 -1.000000
+                                                    anchor 0.006500 -0.025174 0.000000
+                                                  }
+                                                  device [
+                                                    RotationalMotor {
+                                                      name "joint_6_mimic_R2"
+                                                      maxVelocity 10.0
+                                                      minPosition -3.141592653589793
+                                                      maxPosition 3.141592653589793
+                                                      maxTorque 10.0
+                                                    }
+                                                    PositionSensor {
+                                                      name "joint_6_mimic_R2_sensor"
+                                                    }
+                                                  ]
+                                                  endPoint Solid {
+                                                    translation 0.006500 -0.025174 0.000000
+                                                    rotation 0.325647 0.945491 0.000001 3.141592
+                                                    children [
+                                                      Pose {
+                                                        translation 0.019000 -0.080000 -0.003850
+                                                        rotation -1.000000 0.000000 0.000000 1.570800
+                                                        children [
+                                                          Shape {
+                                                            appearance DEF p01_02_gearlink_2_material PBRAppearance {
+                                                              baseColor 0.325490 0.317647 0.317647
+                                                              roughness 1.000000
+                                                              metalness 0
+                                                            }
+                                                            geometry USE p01_02_gearlink
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                    name "link7_2"
+                                                    boundingObject Pose {
+                                                      translation 0.019000 -0.080000 -0.003850
+                                                      rotation -1.000000 0.000000 0.000000 1.570800
+                                                      children [
+                                                        USE p01_02_gearlink
+                                                      ]
+                                                    }
+                                                    physics Physics {
+                                                      density -1
+                                                      mass 0.006402
+                                                      centerOfMass [ 0.001579 -0.036428 -0.003884 ]
+                                                      inertiaMatrix [
+                                                        2.685580e-06 2.305420e-07 2.867350e-06
+                                                        1.897310e-07 -3.440000e-10 -3.050000e-10
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                              name "link11"
+                                              boundingObject Pose {
+                                                translation -0.021182 -0.104415 0.004000
+                                                rotation -1.000000 0.000000 0.000000 1.570800
+                                                children [
+                                                  USE p01_04_finger
+                                                ]
+                                              }
+                                              physics Physics {
+                                                density -1
+                                                mass 0.016561
+                                                centerOfMass [ -0.008665 0.018475 0.004000 ]
+                                                inertiaMatrix [
+                                                  7.986550e-06 1.623620e-06 8.887000e-06
+                                                  2.359140e-06 0.000000e+00 -0.000000e+00
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                        name "link8"
+                                        boundingObject Pose {
+                                          translation -0.054917 0.090565 -0.003850
+                                          rotation -0.236627 0.687027 -0.687024 2.676888
+                                          children [
+                                            USE p01_03_link
+                                          ]
+                                        }
+                                        physics Physics {
+                                          density -1
+                                          mass 0.004111
+                                          centerOfMass [ -0.015395 0.019698 -0.003850 ]
+                                          inertiaMatrix [
+                                            7.030970e-07 4.506990e-07 1.113420e-06
+                                            5.068750e-07 0.000000e+00 0.000000e+00
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "link5"
+                                  boundingObject Group {
+                                    children [
+                                      Pose {
+                                        rotation -0.698634 -0.715479 0.000001 3.141591
+                                        children [
+                                          USE p01_05_base
+                                        ]
+                                      }
+                                      Pose {
+                                        translation -0.000050 -0.000001 -0.000000
+                                        rotation -0.698634 -0.715479 0.000001 3.141591
+                                        children [
+                                          USE p01_07_body
+                                        ]
+                                      }
+                                      Pose {
+                                        translation 0.000050 0.000001 -0.000000
+                                        rotation -0.698634 -0.715479 0.000001 3.141591
+                                        children [
+                                          USE p01_06_body_motor
+                                        ]
+                                      }
+                                      Pose {
+                                        translation -0.023449 0.026949 -0.092650
+                                        rotation 0.999929 0.011910 0.000000 3.141590
+                                        children [
+                                          USE dummy_dc12__2
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                  physics Physics {
+                                    density -1
+                                    mass 0.029448
+                                    centerOfMass [ 0.000327 -0.000770 -0.029745 ]
+                                    inertiaMatrix [
+                                      1.541470e-05 9.740520e-06 8.033260e-06
+                                      -5.605600e-08 2.451000e-09 -5.779000e-09
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "link4"
+                            boundingObject Group {
+                              children [
+                                Pose {
+                                  translation 0.029734 0.055795 0.018825
+                                  rotation 0.496008 -0.712706 0.496010 1.903191
+                                  children [
+                                    USE j4_j5_mirrored
+                                  ]
+                                }
+                                Pose {
+                                  translation 0.029734 0.055795 -0.027075
+                                  rotation 0.496008 -0.712706 0.496010 1.903191
+                                  children [
+                                    USE j4_j5_mirrored__2
+                                  ]
+                                }
+                                Pose {
+                                  translation 0.029734 0.055795 0.018950
+                                  rotation -0.496008 0.712706 0.496010 1.903191
+                                  children [
+                                    USE dummy_dc12
+                                  ]
+                                }
+                              ]
+                            }
+                            physics Physics {
+                              density -1
+                              mass 0.095485
+                              centerOfMass [ 0.030957 0.032317 0.018950 ]
+                              inertiaMatrix [
+                                2.330800e-05 3.085100e-05 3.317820e-05
+                                -1.603090e-06 1.400000e-11 5.000000e-12
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                      name "link3"
+                      boundingObject Group {
+                        children [
+                          Pose {
+                            translation 0.102500 0.000000 0.019000
+                            rotation 0.707105 0.000001 -0.707108 3.141591
+                            children [
+                              USE part_2__3
+                            ]
+                          }
+                          Pose {
+                            translation 0.123500 0.000000 -0.001000
+                            rotation 0.707105 0.707108 0.000001 3.141591
+                            children [
+                              USE dummy_dc12
+                            ]
+                          }
+                          Pose {
+                            translation -0.000000 0.000000 0.019000
+                            rotation 0.577350 0.577350 -0.577352 2.094399
+                            children [
+                              USE fr12_h101_k
+                            ]
+                          }
+                          Pose {
+                            translation 0.102500 0.000000 0.019000
+                            rotation 0.707105 0.000001 -0.707108 3.141591
+                            children [
+                              USE fr12_s102_k
+                            ]
+                          }
+                        ]
+                      }
+                      physics Physics {
+                        density -1
+                        mass 0.108493
+                        centerOfMass [ 0.097142 0.000000 0.018572 ]
+                        inertiaMatrix [
+                          1.799720e-05 1.189450e-04 1.136340e-04
+                          0.000000e+00 6.838030e-07 -0.000000e+00
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "link2"
+                boundingObject Group {
+                  children [
+                    Pose {
+                      translation 0.028161 -0.128449 0.024544
+                      rotation -0.614640 0.494401 0.614642 2.223278
+                      children [
+                        USE fr12_s102_k
+                      ]
+                    }
+                    Pose {
+                      translation 0.032661 -0.148961 0.004544
+                      rotation -0.994174 -0.107785 0.000000 3.141590
+                      children [
+                        USE dummy_dc12
+                      ]
+                    }
+                    Pose {
+                      translation 0.029982 -0.136752 0.024544
+                      rotation -0.107164 0.988449 0.107164 1.582418
+                      children [
+                        USE part_2__2
+                      ]
+                    }
+                    Pose {
+                      translation 0.000000 -0.000000 0.024500
+                      rotation 0.705037 0.076439 -0.705039 2.989012
+                      children [
+                        USE fr13_h101_k
+                      ]
+                    }
+                  ]
+                }
+                physics Physics {
+                  density -1
+                  mass 0.122875
+                  centerOfMass [ 0.024249 -0.110606 0.024159 ]
+                  inertiaMatrix [
+                    2.641390e-04 3.601440e-05 2.664760e-04
+                    5.254390e-05 2.600310e-07 -1.182070e-06
+                  ]
+                }
+              }
+            }
+          ]
+          name "link1"
+          boundingObject Group {
+            children [
+              Pose {
+                translation 0.000000 -0.000000 0.024500
+                rotation -0.681841 -0.731500 0.000001 3.141591
+                children [
+                  USE part_3
+                ]
+              }
+              Pose {
+                translation 0.000000 -0.000000 0.024500
+                rotation -0.681841 -0.731500 0.000001 3.141591
+                children [
+                  USE dummy_dc13_idle__2
+                ]
+              }
+            ]
+          }
+          physics Physics {
+            density -1
+            mass 0.212381
+            centerOfMass [ -0.018697 -0.000784 -0.043019 ]
+            inertiaMatrix [
+              8.799490e-05 1.180990e-04 1.200430e-04
+              -2.865410e-06 -8.132200e-06 -2.553960e-07
+            ]
+          }
+        }
+      }
+    ]
+    name IS name
+    boundingObject Group {
+      children [
+        Pose {
+          translation -0.015500 -0.000000 0.034500
+          rotation 0.000000 0.000000 1.000000 1.570800
+          children [
+     #       USE dummy_dc13_idle
+          ]
+        }
+        Pose {
+          translation 0 0 0.025
+          rotation 0.000000 0.000000 1.000000 1.570800
+          children [
+#            USE part_2
+            Box { size 0.1 0.1 0.05 }
+          ]
+        }
+      ]
+    }
+    physics Physics {
+      density -1
+      mass 5
+      centerOfMass [ -0.000309 0.000000 0.026389 ]
+      
+    }
+
+  }
+
+}
