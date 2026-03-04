@@ -1,3 +1,8 @@
+import os
+os.environ['WEBOTS_HOME'] = '/usr/local/webots'
+
+os.environ['WEBOTS_CONTROLLER_URL'] = "ipc://1234/MyRobot"
+
 from controller import Robot
 
 # 1. 로봇 및 타임스텝 초기화
