@@ -8,7 +8,7 @@ PROTO MyRobot [
   field  SFVec3f     translation     0 0 0
   field  SFRotation  rotation        0 0 1 0
   field  SFString    name            "MyRobot"  # Is `Robot.name`.
-  field  SFString    controller      "void"     # Is `Robot.controller`.
+  field  SFString    controller      "<extern>"     # Is `Robot.controller`.
   field  MFString    controllerArgs  []         # Is `Robot.controllerArgs`.
   field  SFString    customData      ""         # Is `Robot.customData`.
   field  SFBool      supervisor      FALSE      # Is `Robot.supervisor`.
@@ -674,10 +674,12 @@ PROTO MyRobot [
                                               ]
                                               name "link10"
                                               boundingObject Pose {
-                                                translation -0.047608 0.095313 0.004000
+                                                #translation -0.047608 0.095313 0.004000
                                                 rotation -0.236627 0.687027 -0.687024 2.676888
+                                                translation 0.03 -0.02 0.004
                                                 children [
-                                                  USE p01_04_finger
+                                                # USE p01_04_finger
+                                                Box { size 0.02 0.015 0.055 }
                                                 ]
                                               }
                                               physics Physics {
@@ -839,10 +841,11 @@ PROTO MyRobot [
                                               ]
                                               name "link11"
                                               boundingObject Pose {
-                                                translation -0.021182 -0.104415 0.004000
+                                                translation -0.011 0.034 0.004
                                                 rotation -1.000000 0.000000 0.000000 1.570800
                                                 children [
-                                                  USE p01_04_finger
+                                                #  USE p01_04_finger
+                                                Box { size 0.02 0.015 0.055 }
                                                 ]
                                               }
                                               physics Physics {
@@ -1100,12 +1103,12 @@ PROTO MyRobot [
         }
       ]
     }
-    physics Physics {
-      density -1
-      mass 5
-      centerOfMass [ -0.000309 0.000000 0.026389 ]
-      
-    }
+    #physics Physics {
+    #  density -1
+    #  mass 5
+    #  centerOfMass [ -0.000309 0.000000 0.026389 ]
+    #  
+    #}
 
   }
 
