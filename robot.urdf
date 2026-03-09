@@ -572,21 +572,21 @@
     <parent link="link3"/>
     <child link="link4"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-1.73961" upper="0.354782"/>
+    <limit effort="10" velocity="10" lower="-2.8078" upper="0.354782"/>
   </joint>
   <joint name="joint_3" type="revolute">
     <origin xyz="0.0326611 -0.148961 0.005544" rpy="-0 -0 -0.172343"/>
     <parent link="link2"/>
     <child link="link3"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-1.70606" upper="0.388333"/>
+    <limit effort="10" velocity="10" lower="-2.2292" upper="0.388333"/>
   </joint>
   <joint name="joint_2" type="revolute">
     <origin xyz="-0.0017197 0.02444 -0.0458276" rpy="1.5708 0 0.0702486"/>
     <parent link="link1"/>
     <child link="link2"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-0.215989" upper="1.87841"/>
+    <limit effort="10" velocity="10" lower="-0.524" upper="1.57"/>
   </joint>
   <joint name="joint_1" type="revolute">
     <origin xyz="-0.0155 -0 0.059" rpy="3.14159 -0 3.14159"/>

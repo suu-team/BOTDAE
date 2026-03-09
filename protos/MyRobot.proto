@@ -40,6 +40,7 @@ PROTO MyRobot [
             geometry DEF dummy_dc13_idle Mesh {
               url "assets/dummy_dc13_idle.stl"
             }
+            castShadows FALSE
           }
         ]
       }
@@ -56,12 +57,13 @@ PROTO MyRobot [
             geometry DEF part_2 Mesh {
               url "assets/part_2.stl"
             }
+            castShadows FALSE
           }
         ]
       }
       HingeJoint {
         jointParameters HingeJointParameters {
-          axis 0.000000 0.000003 -1.000000
+          axis 0.000000 -0.000003 1.000000
           anchor -0.015500 -0.000000 0.059000
         }
         device [
@@ -93,6 +95,7 @@ PROTO MyRobot [
                   geometry DEF part_3 Mesh {
                     url "assets/part_3.stl"
                   }
+                  castShadows FALSE
                 }
               ]
             }
@@ -109,20 +112,22 @@ PROTO MyRobot [
                   geometry DEF dummy_dc13_idle__2 Mesh {
                     url "assets/dummy_dc13_idle__2.stl"
                   }
+                  castShadows FALSE
                 }
               ]
             }
             HingeJoint {
               jointParameters HingeJointParameters {
-                axis 0.070191 -0.997534 -0.000004
+                axis -0.070191 0.997534 0.000004
                 anchor -0.001720 0.024440 -0.045828
+                position 1.774
               }
               device [
                 RotationalMotor {
                   name "joint_2"
                   maxVelocity 10.0
-                  minPosition -0.215989
-                  maxPosition 1.87841
+                  minPosition  1.25
+                  maxPosition  3.344
                   maxTorque 10.0
                 }
                 PositionSensor {
@@ -146,6 +151,7 @@ PROTO MyRobot [
                         geometry DEF fr12_s102_k Mesh {
                           url "assets/fr12_s102_k.stl"
                         }
+                        castShadows FALSE
                       }
                     ]
                   }
@@ -162,6 +168,7 @@ PROTO MyRobot [
                         geometry DEF dummy_dc12 Mesh {
                           url "assets/dummy_dc12.stl"
                         }
+                        castShadows FALSE
                       }
                     ]
                   }
@@ -178,6 +185,7 @@ PROTO MyRobot [
                         geometry DEF part_2__2 Mesh {
                           url "assets/part_2__2.stl"
                         }
+                        castShadows FALSE
                       }
                     ]
                   }
@@ -194,19 +202,20 @@ PROTO MyRobot [
                         geometry DEF fr13_h101_k Mesh {
                           url "assets/fr13_h101_k.stl"
                         }
+                        castShadows FALSE
                       }
                     ]
                   }
                   HingeJoint {
                     jointParameters HingeJointParameters {
-                      axis 0.000000 0.000000 1.000000
+                      axis 0.000000 0.000000 -1.000000
                       anchor 0.032661 -0.148961 0.005544
                     }
                     device [
                       RotationalMotor {
                         name "joint_3"
                         maxVelocity 10.0
-                        minPosition -1.70606
+                        minPosition -2.7528
                         maxPosition 0.388333
                         maxTorque 10.0
                       }
@@ -231,6 +240,7 @@ PROTO MyRobot [
                               geometry DEF part_2__3 Mesh {
                                 url "assets/part_2__3.stl"
                               }
+                              castShadows FALSE
                             }
                           ]
                         }
@@ -261,6 +271,7 @@ PROTO MyRobot [
                               geometry DEF fr12_h101_k Mesh {
                                 url "assets/fr12_h101_k.stl"
                               }
+                              castShadows FALSE
                             }
                           ]
                         }
@@ -280,14 +291,14 @@ PROTO MyRobot [
                         }
                         HingeJoint {
                           jointParameters HingeJointParameters {
-                            axis 0.000000 0.000000 1.000000
+                            axis 0.000000 0.000000 -1.000000
                             anchor 0.123500 0.000000 -0.000000
                           }
                           device [
                             RotationalMotor {
                               name "joint_4"
                               maxVelocity 10.0
-                              minPosition -1.73961
+                              minPosition -2.8078
                               maxPosition 0.354782
                               maxTorque 10.0
                             }
@@ -311,6 +322,7 @@ PROTO MyRobot [
                                     geometry DEF j4_j5_mirrored Mesh {
                                       url "assets/j4_j5_mirrored.stl"
                                     }
+                                    castShadows FALSE
                                   }
                                 ]
                               }
@@ -327,6 +339,7 @@ PROTO MyRobot [
                                     geometry DEF j4_j5_mirrored__2 Mesh {
                                       url "assets/j4_j5_mirrored__2.stl"
                                     }
+                                    castShadows FALSE
                                   }
                                 ]
                               }
@@ -377,6 +390,7 @@ PROTO MyRobot [
                                           geometry DEF p01_05_base Mesh {
                                             url "assets/p01_05_base.stl"
                                           }
+                                          castShadows FALSE
                                         }
                                       ]
                                     }
@@ -393,6 +407,7 @@ PROTO MyRobot [
                                           geometry DEF p01_07_body Mesh {
                                             url "assets/p01_07_body.stl"
                                           }
+                                          castShadows FALSE
                                         }
                                       ]
                                     }
@@ -409,6 +424,7 @@ PROTO MyRobot [
                                           geometry DEF p01_06_body_motor Mesh {
                                             url "assets/p01_06_body_motor.stl"
                                           }
+                                          castShadows FALSE
                                         }
                                       ]
                                     }
@@ -425,6 +441,7 @@ PROTO MyRobot [
                                           geometry DEF dummy_dc12__2 Mesh {
                                             url "assets/dummy_dc12__2.stl"
                                           }
+                                          castShadows FALSE
                                         }
                                       ]
                                     }
@@ -462,6 +479,7 @@ PROTO MyRobot [
                                                 geometry DEF p01_01_gearlink_motor Mesh {
                                                   url "assets/p01_01_gearlink_motor.stl"
                                                 }
+                                                castShadows FALSE
                                               }
                                             ]
                                           }
@@ -519,6 +537,7 @@ PROTO MyRobot [
                                                 geometry DEF p01_02_gearlink Mesh {
                                                   url "assets/p01_02_gearlink.stl"
                                                 }
+                                                castShadows FALSE
                                               }
                                             ]
                                           }
@@ -576,6 +595,7 @@ PROTO MyRobot [
                                                 geometry DEF p01_03_link Mesh {
                                                   url "assets/p01_03_link.stl"
                                                 }
+                                                castShadows FALSE
                                               }
                                             ]
                                           }
@@ -613,6 +633,7 @@ PROTO MyRobot [
                                                       geometry DEF p01_04_finger Mesh {
                                                         url "assets/p01_04_finger.stl"
                                                       }
+                                                      castShadows FALSE
                                                     }
                                                   ]
                                                 }
