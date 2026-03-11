@@ -8,13 +8,10 @@ timestep = int(robot.getBasicTimeStep())
 camera = robot.getDevice("realsense_rgb")
 camera.enable(timestep)
 
-#####emitter############
-
+##### emitter #####
 emitter = robot.getDevice("emitter")
-
-
-########################
-
+emitter.setChannel(1)
+###################
 
 min_area = 1500
 max_area = 10000
@@ -57,7 +54,7 @@ while robot.step(timestep) != -1:
 
         roi_hsv = hsv[y:y+h, x:x+w]
 
-        # 🔥 색상별 마스크 픽셀 카운트 방식
+        # 색상 범위
         color_ranges = {
             "red1":  ((0, 100, 80), (10, 255, 255)),
             "red2":  ((170, 100, 80), (179, 255, 255)),
@@ -90,7 +87,7 @@ while robot.step(timestep) != -1:
         if detected_color in ["red1", "red2"]:
             detected_color = "red"
 
-        # 최소 픽셀 조건 (노이즈 제거)
+        # 노이즈 제거
         if max_pixels < 200:
             continue
 
@@ -102,23 +99,19 @@ while robot.step(timestep) != -1:
         cv2.putText(bgr, detected_color, (x, y-5),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,255,0), 2)
 
-        # 🔥 5초마다 왼→오 순서 출력
-        if current_time - last_update_time > update_interval:
+    # 🔥 5초마다 왼→오 순서로 출력
+    if current_time - last_update_time > update_interval:
 
-            detected_blocks.sort(key=lambda b: b[0])
-            ordered_colors = [b[1] for b in detected_blocks]
+        detected_blocks.sort(key=lambda b: b[0])
+        ordered_colors = [b[1] for b in detected_blocks]
 
-            print("===== Current Order (Left → Right) =====")
-            print(ordered_colors)
-            print("========================================")
+        print("emitter")
+        print(ordered_colors)
 
-        #############################
-            msg = ",".join(ordered_colors)   # list → string 변환
-            emitter.send(msg.encode())      # string → bytes
-        #############################
+        msg = ",".join(ordered_colors)
+        emitter.send(msg.encode())
 
-            last_update_time = current_time
+        last_update_time = current_time
 
     cv2.imshow("Blocks", bgr)
     cv2.waitKey(1)
-
