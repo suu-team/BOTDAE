@@ -1,5 +1,3 @@
-###통신+토크제한 되어있는 그리퍼 제한 코드
-
 import os
 os.environ['WEBOTS_HOME'] = '/usr/local/webots'
 
@@ -59,7 +57,9 @@ print("Gripper sync controller started...")
 
 # 4. 메인 루프
 receiver = robot.getDevice("receiver")
+print("receiver device:", receiver)
 receiver.enable(timestep)
+receiver.setChannel(1)
 
 while robot.step(timestep) != -1:
 
@@ -68,10 +68,9 @@ while robot.step(timestep) != -1:
     for motor in same_motors:
         motor.setPosition(target_pos)
 
-    # --- 리시버 부분 ---
-    print("queue:", receiver.getQueueLength())
-
+    
     if receiver.getQueueLength() > 0:
         msg = receiver.getString()
-        print(msg)
+        print("receiver")
+        print("[",msg,"]")
         receiver.nextPacket()
