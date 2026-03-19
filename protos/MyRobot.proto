@@ -57,7 +57,6 @@ PROTO MyRobot [
             geometry DEF part_2 Mesh {
               url "assets/part_2.stl"
             }
-            castShadows FALSE
           }
         ]
       }
@@ -95,7 +94,6 @@ PROTO MyRobot [
                   geometry DEF part_3 Mesh {
                     url "assets/part_3.stl"
                   }
-                  castShadows FALSE
                 }
               ]
             }
@@ -185,7 +183,6 @@ PROTO MyRobot [
                         geometry DEF part_2__2 Mesh {
                           url "assets/part_2__2.stl"
                         }
-                        castShadows FALSE
                       }
                     ]
                   }
@@ -240,7 +237,6 @@ PROTO MyRobot [
                               geometry DEF part_2__3 Mesh {
                                 url "assets/part_2__3.stl"
                               }
-                              castShadows FALSE
                             }
                           ]
                         }
@@ -255,6 +251,7 @@ PROTO MyRobot [
                                 metalness 0
                               }
                               geometry USE dummy_dc12
+                              castShadows FALSE
                             }
                           ]
                         }
@@ -322,7 +319,6 @@ PROTO MyRobot [
                                     geometry DEF j4_j5_mirrored Mesh {
                                       url "assets/j4_j5_mirrored.stl"
                                     }
-                                    castShadows FALSE
                                   }
                                 ]
                               }
@@ -339,7 +335,6 @@ PROTO MyRobot [
                                     geometry DEF j4_j5_mirrored__2 Mesh {
                                       url "assets/j4_j5_mirrored__2.stl"
                                     }
-                                    castShadows FALSE
                                   }
                                 ]
                               }
@@ -354,6 +349,7 @@ PROTO MyRobot [
                                       metalness 0
                                     }
                                     geometry USE dummy_dc12
+                                    castShadows FALSE
                                   }
                                 ]
                               }
@@ -407,7 +403,6 @@ PROTO MyRobot [
                                           geometry DEF p01_07_body Mesh {
                                             url "assets/p01_07_body.stl"
                                           }
-                                          castShadows FALSE
                                         }
                                       ]
                                     }
@@ -424,7 +419,6 @@ PROTO MyRobot [
                                           geometry DEF p01_06_body_motor Mesh {
                                             url "assets/p01_06_body_motor.stl"
                                           }
-                                          castShadows FALSE
                                         }
                                       ]
                                     }
