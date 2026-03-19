@@ -80,6 +80,11 @@ PROTO IntelRealsenseD455 [
         focus IS focus
         recognition IS recognition
       }
+      
+      Emitter {
+    	name "emitter"
+    	channel 1
+	}
 
       Solid {
         translation 0.013 0 0
@@ -98,6 +103,9 @@ PROTO IntelRealsenseD455 [
         ]
         locked TRUE
       }
+      
+     
+      
     ]
 
     boundingObject Box {
