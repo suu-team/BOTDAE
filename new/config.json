@@ -1,8 +1,0 @@
-{
-  "documentId": "0c58bcddcc517424c69b8683",
-  "robotName": "BOTDAE",
-  "outputFormat": "urdf",
-  "drawFrames": false,
-  "jointMaxEffort": 100,
-  "jointMaxVelocity": 10
-}
