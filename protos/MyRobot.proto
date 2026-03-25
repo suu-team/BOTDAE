@@ -216,7 +216,7 @@ PROTO MyRobot [
                       RotationalMotor {
                         name "joint_3"
                         maxVelocity 10.0
-                        minPosition -0.93
+                        minPosition -0.83
                         maxPosition 2.8
                         maxTorque 10.0
                       }

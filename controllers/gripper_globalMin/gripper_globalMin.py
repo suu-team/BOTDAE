@@ -198,13 +198,7 @@ def terminal_input_thread():
                 
                 print(f"🧬 진화 완료! (목표 오차: {result.fun:.5f} m)")
                 
-                # ---------------------------------------------------------
-                # (이 아래부터는 원래 있던 디버깅 출력 코드와 자동 이동 코드가 그대로 이어짐)
-                # 💡 [디버깅] ikpy가 계산한 모든 관절의 실제 3D 좌표 뽑아보기!
-                # ...
 
-                # ... (역기구학 계산 완료 직후) ...
-                
                 # 💡 [디버깅] ikpy가 계산한 모든 관절의 실제 3D 좌표 뽑아보기!
                 fk_all = my_arm_chain.forward_kinematics(ik_target, full_kinematics=True)
                 j5_z = fk_all[5][2, 3]  # Index 5 (J5)의 Z 높이
@@ -237,7 +231,6 @@ def terminal_input_thread():
                 plt.close(fig)
                 print("📸 뼈대가 확대된 'ik_debug_plot_zoomed.png' 파일로 저장되었습니다!")
 
-                # 💡 웅철이의 원래 깔끔한 출력 코드로 복구!
                 print("\n📊 --- IK 수학 계산 결과 ---")
                 print(f"🎯 목표 좌표: X={x}, Y={y}, Z={z}")
                 for i in range(1, 6): 
@@ -256,17 +249,17 @@ def terminal_input_thread():
                     # ikpy가 계산해 낸 순수 정답 각도 (라디안)
                     pure_rad = ik_target[i] 
                     
-                    # 1. 큐에 이동 명령 넣기 (웅철이가 'j1 45' 친 거랑 똑같은 효과!)
+                    # 1. 큐에 이동 명령 넣기 
                     # 💡 set_motor_angle_rad 함수가 오프셋을 알아서 더해주니까 순수 각도만 넘기면 돼!
                     command_queue.put(('move', j_name, pure_rad))
                     print(f"  👉 [{j_name}] 목표 각도로 이동 중...")
                     
-                    # 2. 다음 관절이 움직이기 전까지 1.5초 대기 (차례대로 움직이게 하는 핵심!)
+                    # 2. 다음 관절이 움직이기 전까지 1.5초 대기 
                     time.sleep(1.5) 
                     
                 print("\n✅ 모든 관절 이동 완료! TCP가 목표 좌표에 도달했습니다! 🎯")
 
-            # 💡 [모드 2] 개별 관절 이동 (j1~j5) - 웅철이 원본 코드로 완벽 복구!
+            # 💡 [모드 2] 개별 관절 이동 (j1~j5) 
             elif cmd.startswith('j') and len(cmd) == 2 and cmd[1].isdigit() and len(parts) == 2:
                 j_num = cmd[1]
                 deg = float(parts[1])
@@ -282,7 +275,6 @@ def terminal_input_thread():
             else:
                 print("❌ 명령 형식이 틀렸습니다. (예: calc 0.2 0 0.1 / j2 45)")
 
-        # ... (기존 코드) ...
         except ValueError as ve:
             # 💡 단순히 "숫자 이상해"라고 하지 말고, 진짜 무슨 에러인지 찍어보자!
             print(f"🔥 진짜 에러 발생: {ve}") 
@@ -297,6 +289,8 @@ threading.Thread(target=terminal_input_thread, daemon=True).start()
 for joint_name in JOINT_OFFSETS.keys():
     if joint_name == 'joint_6':
         set_motor_angle_rad('joint_6', math.radians(70))
+    elif joint_name == 'joint_2':
+        set_motor_angle_rad('joint_2', math.radians(90))
     else:
         set_motor_angle_rad(joint_name, 0.0)
 
