@@ -80,6 +80,11 @@ PROTO IntelRealsenseD455 [
         focus IS focus
         recognition IS recognition
       }
+      
+      Emitter {
+    	name "emitter"
+    	channel 1
+	}
 
       Solid {
         translation 0.013 0 0
@@ -92,16 +97,20 @@ PROTO IntelRealsenseD455 [
                 geometry Mesh {
                   url "assets/IntelRealsenseD455.stl"
                 }
+                castShadows FALSE
               }
             ]
           }
         ]
         locked TRUE
       }
+      
+     
+      
     ]
 
     boundingObject Box {
-      size 0.000027 0.000123 0.000025
+      size 0.03 0.1 0.03
     }
 
     physics NULL

@@ -27,6 +27,10 @@ PROTO MyRobot [
     selfCollision IS selfCollision
  
     children [
+      Receiver {
+        name "receiver"
+        channel 1
+      }
       Pose {
         translation -0.015500 -0.000000 0.034500
         rotation 0.000000 0.000000 1.000000 1.570800
@@ -69,8 +73,8 @@ PROTO MyRobot [
           RotationalMotor {
             name "joint_1"
             maxVelocity 10.0
-            minPosition -1.64104
-            maxPosition 1.50055
+            minPosition -1.53
+            maxPosition 1.62
             maxTorque 10.0
           }
           PositionSensor {
@@ -98,7 +102,7 @@ PROTO MyRobot [
               ]
             }
             Pose {
-              translation 0.000000 -0.000000 0.024500
+              translation 0.000000 0.000000 0.024500
               rotation -0.681841 -0.731500 0.000001 3.141591
               children [
                 Shape {
@@ -124,8 +128,8 @@ PROTO MyRobot [
                 RotationalMotor {
                   name "joint_2"
                   maxVelocity 10.0
-                  minPosition  1.25
-                  maxPosition  3.344
+                  minPosition  0.4
+                  maxPosition  2.5
                   maxTorque 10.0
                 }
                 PositionSensor {
@@ -212,8 +216,8 @@ PROTO MyRobot [
                       RotationalMotor {
                         name "joint_3"
                         maxVelocity 10.0
-                        minPosition -2.7528
-                        maxPosition 0.388333
+                        minPosition -0.93
+                        maxPosition 2.8
                         maxTorque 10.0
                       }
                       PositionSensor {
@@ -295,8 +299,8 @@ PROTO MyRobot [
                             RotationalMotor {
                               name "joint_4"
                               maxVelocity 10.0
-                              minPosition -2.8078
-                              maxPosition 0.354782
+                              minPosition -0.4
+                              maxPosition 2.8
                               maxTorque 10.0
                             }
                             PositionSensor {
@@ -362,8 +366,8 @@ PROTO MyRobot [
                                   RotationalMotor {
                                     name "joint_5"
                                     maxVelocity 10.0
-                                    minPosition -1.59462
-                                    maxPosition 1.54698
+                                    minPosition -1.5708
+                                    maxPosition 1.5708
                                     maxTorque 10.0
                                   }
                                   PositionSensor {
