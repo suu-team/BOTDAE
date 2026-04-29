@@ -1,0 +1,598 @@
+<?xml version="1.0" ?>
+<robot name="robot_arm_urdf">
+  <link name="link0">
+    <inertial>
+      <origin xyz="0.000309864 -0.000113995 0.0250597" rpy="0 0 0"/>
+      <mass value="0.289487"/>
+      <inertia ixx="0.000147378" ixy="5.315e-09" ixz="-1.0857e-06" iyy="0.00019871" iyz="3.34025e-07" izz="0.000188"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0155 0 0.0345" rpy="0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_2.stl"/>
+      </geometry>
+      <material name="part_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0155 0 0.0345" rpy="0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_2.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0155 -0.0002 0.0345" rpy="0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc13_idle.stl"/>
+      </geometry>
+      <material name="dummy_dc13_idle_material">
+        <color rgba="0.980392 0.713725 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0155 -0.0002 0.0345" rpy="0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc13_idle.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1">
+    <inertial>
+      <origin xyz="0.000460652 0.0207349 -0.0395096" rpy="0 0 0"/>
+      <mass value="0.244315"/>
+      <inertia ixx="0.000147526" ixy="9.35342e-07" ixz="7.11144e-07" iyy="0.000117384" iyz="-2.61453e-06" izz="0.000136775"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.0245" rpy="-3.14159 -0 1.5579e-08"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_3.stl"/>
+      </geometry>
+      <material name="part_3_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0245" rpy="-3.14159 -0 1.5579e-08"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_3.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-3e-12 0.0002 0.0245" rpy="-3.14159 0 1.5579e-08"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc13_idle__2.stl"/>
+      </geometry>
+      <material name="dummy_dc13_idle_2_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-3e-12 0.0002 0.0245" rpy="-3.14159 0 1.5579e-08"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc13_idle__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link2">
+    <inertial>
+      <origin xyz="-1.89231e-05 -0.113233 0.0241592" rpy="0 0 0"/>
+      <mass value="0.122875"/>
+      <inertia ixx="0.00027566" ixy="-3.7118e-08" ixz="6.54e-10" iyy="2.44938e-05" iyz="-1.21033e-06" izz="0.000266476"/>
+    </inertial>
+    <visual>
+      <origin xyz="-2.23277e-05 -0.1315 0.024544" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr12_s102_k.stl"/>
+      </geometry>
+      <material name="fr12_s102_k_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.23277e-05 -0.1315 0.024544" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr12_s102_k.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-2.23277e-05 -0.1525 0.004544" rpy="3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12.stl"/>
+      </geometry>
+      <material name="dummy_dc12_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.23277e-05 -0.1525 0.004544" rpy="3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-2.23277e-05 -0.14 0.024544" rpy="-0 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_2__2.stl"/>
+      </geometry>
+      <material name="part_2_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.23277e-05 -0.14 0.024544" rpy="-0 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_2__2.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 -0 0.0245" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr13_h101_k.stl"/>
+      </geometry>
+      <material name="fr13_h101_k_material">
+        <color rgba="0.768627 0.886275 0.952941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0.0245" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr13_h101_k.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link3">
+    <inertial>
+      <origin xyz="0 -0.0971416 0.0185718" rpy="0 0 0"/>
+      <mass value="0.108493"/>
+      <inertia ixx="0.000118945" ixy="-0" ixz="-0" iyy="1.79972e-05" iyz="-6.83803e-07" izz="0.000113634"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0 -0.1025 0.019" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_2__3.stl"/>
+      </geometry>
+      <material name="part_2_3_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.1025 0.019" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/part_2__3.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0 -0.1235 -0.001" rpy="-3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12.stl"/>
+      </geometry>
+      <material name="dummy_dc12_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.1235 -0.001" rpy="-3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0 -0 0.019" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr12_h101_k.stl"/>
+      </geometry>
+      <material name="fr12_h101_k_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0.019" rpy="3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr12_h101_k.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0 -0.1025 0.019" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr12_s102_k.stl"/>
+      </geometry>
+      <material name="fr12_s102_k_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.1025 0.019" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/fr12_s102_k.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0085 -0.06265 0.019075" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/j4_j5_mirrored.stl"/>
+      </geometry>
+      <material name="j4_j5_mirrored_material">
+        <color rgba="0.537255 0.854902 0.827451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0085 -0.06265 0.019075" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/j4_j5_mirrored.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0085 -0.06265 0.019075" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/j4_j5_mirrored__2.stl"/>
+      </geometry>
+      <material name="j4_j5_mirrored_2_material">
+        <color rgba="0.537255 0.854902 0.827451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0085 -0.06265 0.019075" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/j4_j5_mirrored__2.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0085 -0.06265 0.019075" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12__2.stl"/>
+      </geometry>
+      <material name="dummy_dc12_3_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0085 -0.06265 0.019075" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link5">
+    <inertial>
+      <origin xyz="-0.000777381 -0.000308146 -0.0297451" rpy="0 0 0"/>
+      <mass value="0.0294484"/>
+      <inertia ixx="9.74641e-06" ixy="1.91104e-07" ixz="-5.836e-09" iyy="1.54088e-05" iyz="-2.313e-09" izz="8.03326e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -0 -0" rpy="3.14159 0 -3.895e-09"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_05_base.stl"/>
+      </geometry>
+      <material name="p01_05_base_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0" rpy="3.14159 0 -3.895e-09"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_05_base.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 5e-05 -0" rpy="3.14159 0 -3.895e-09"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_07_body.stl"/>
+      </geometry>
+      <material name="p01_07_body_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 5e-05 -0" rpy="3.14159 0 -3.895e-09"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_07_body.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0 -5e-05 0" rpy="-3.14159 0 -3.895e-09"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_06_body_motor.stl"/>
+      </geometry>
+      <material name="p01_06_body_motor_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -5e-05 0" rpy="-3.14159 0 -3.895e-09"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_06_body_motor.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0275 0.0228 -0.09265" rpy="-3.14159 0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12__3.stl"/>
+      </geometry>
+      <material name="dummy_dc12_4_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0275 0.0228 -0.09265" rpy="-3.14159 0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/dummy_dc12__3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link6">
+    <inertial>
+      <origin xyz="0.00148139 0.0131112 -0.00445993" rpy="0 0 0"/>
+      <mass value="0.00659741"/>
+      <inertia ixx="2.745e-06" ixy="1.87617e-07" ixz="-5.675e-09" iyy="2.4936e-07" iyz="-5.7184e-08" izz="2.90928e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.019 -0.03 -0.00385" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_01_gearlink_motor.stl"/>
+      </geometry>
+      <material name="p01_01_gearlink_motor_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.019 -0.03 -0.00385" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_01_gearlink_motor.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_6" type="revolute">
+    <origin xyz="0.019 -0.00395 -0.03" rpy="1.5708 1.5708 0"/>
+    <parent link="link5"/>
+    <child link="link6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.39626" upper="0"/>
+  </joint>
+  <link name="link7">
+    <inertial>
+      <origin xyz="0.00157884 0.0135719 -0.00388399" rpy="0 0 0"/>
+      <mass value="0.00640183"/>
+      <inertia ixx="2.68558e-06" ixy="1.89731e-07" ixz="-3.44e-10" iyy="2.30542e-07" iyz="-3.05e-10" izz="2.86735e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.019 -0.03 -0.00385" rpy="-1.5708 -0 -0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_02_gearlink.stl"/>
+      </geometry>
+      <material name="p01_02_gearlink_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.019 -0.03 -0.00385" rpy="-1.5708 -0 -0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_02_gearlink.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_6_mimic_gear" type="revolute">
+    <origin xyz="-0.019 0.00395 -0.03" rpy="-1.5708 1.5708 0"/>
+    <parent link="link5"/>
+    <child link="link7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <mimic joint="joint_6" multiplier="1.0"/>
+  </joint>
+  <link name="link9">
+    <inertial>
+      <origin xyz="-0 0.025 -0.00385" rpy="0 0 0"/>
+      <mass value="0.00411112"/>
+      <inertia ixx="1.09925e-06" ixy="0" ixz="-0" iyy="5.4549e-08" iyz="0" izz="1.11342e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0125 0.105174 -0.00385" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_03_link.stl"/>
+      </geometry>
+      <material name="p01_03_link_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0125 0.105174 -0.00385" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_03_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link10">
+    <inertial>
+      <origin xyz="0.0184752 0.00866502 0.004" rpy="0 0 0"/>
+      <mass value="0.0165615"/>
+      <inertia ixx="1.62362e-06" ixy="-2.35914e-06" ixz="-0" iyy="7.98655e-06" iyz="-0" izz="8.887e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.104415 0.0211824 0.004" rpy="-1.5708 0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_04_finger.stl"/>
+      </geometry>
+      <material name="p01_04_finger_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.104415 0.0211824 0.004" rpy="-1.5708 0 -1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_04_finger.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link6_2">
+    <inertial>
+      <origin xyz="0.00148139 -0.0368888 -0.00445993" rpy="0 0 0"/>
+      <mass value="0.00659741"/>
+      <inertia ixx="2.745e-06" ixy="1.87617e-07" ixz="-5.675e-09" iyy="2.4936e-07" iyz="-5.7184e-08" izz="2.90928e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.019 -0.08 -0.00385" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_01_gearlink_motor.stl"/>
+      </geometry>
+      <material name="p01_01_gearlink_motor_2_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.019 -0.08 -0.00385" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_01_gearlink_motor.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_6_mimic_L2" type="revolute">
+    <origin xyz="-0.0251744 -0.0065 0" rpy="3.14159 -0 0"/>
+    <parent link="link10"/>
+    <child link="link6_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <joint name="joint_6_mimic_L3" type="revolute">
+    <origin xyz="0 0.05 0" rpy="3.14159 -0 0"/>
+    <parent link="link9"/>
+    <child link="link10"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <joint name="joint_6_mimic_L1" type="revolute">
+    <origin xyz="0.0125 -0.00395 -0.0551744" rpy="1.5708 1.5708 0"/>
+    <parent link="link5"/>
+    <child link="link9"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <link name="link8">
+    <inertial>
+      <origin xyz="0 -0.025 0.00385" rpy="0 0 0"/>
+      <mass value="0.00411112"/>
+      <inertia ixx="1.09925e-06" ixy="0" ixz="-0" iyy="5.4549e-08" iyz="-0" izz="1.11342e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0125 -0.105174 0.00385" rpy="1.5708 0 -3.14159"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_03_link.stl"/>
+      </geometry>
+      <material name="p01_03_link_2_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0125 -0.105174 0.00385" rpy="1.5708 0 -3.14159"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_03_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link11">
+    <inertial>
+      <origin xyz="0.0184752 -0.00866502 -0.004" rpy="0 0 0"/>
+      <mass value="0.0165615"/>
+      <inertia ixx="1.62362e-06" ixy="2.35914e-06" ixz="0" iyy="7.98655e-06" iyz="-0" izz="8.887e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.104415 -0.0211824 -0.004" rpy="1.5708 -0 1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_04_finger.stl"/>
+      </geometry>
+      <material name="p01_04_finger_2_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.104415 -0.0211824 -0.004" rpy="1.5708 -0 1.5708"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_04_finger.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link7_2">
+    <inertial>
+      <origin xyz="0.00157884 -0.0364281 -0.00388399" rpy="0 0 0"/>
+      <mass value="0.00640183"/>
+      <inertia ixx="2.68558e-06" ixy="1.89731e-07" ixz="-3.44e-10" iyy="2.30542e-07" iyz="-3.05e-10" izz="2.86735e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.019 -0.08 -0.00385" rpy="-1.5708 0 -0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_02_gearlink.stl"/>
+      </geometry>
+      <material name="p01_02_gearlink_2_material">
+        <color rgba="0.32549 0.317647 0.317647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.019 -0.08 -0.00385" rpy="-1.5708 0 -0"/>
+      <geometry>
+        <mesh filename="robotarm_assets/p01_02_gearlink.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_6_mimic_R2" type="revolute">
+    <origin xyz="-0.0251744 0.0065 0" rpy="0 -0 0"/>
+    <parent link="link11"/>
+    <child link="link7_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <joint name="joint_6_mimic_R3" type="revolute">
+    <origin xyz="0 -0.05 -0" rpy="-3.14159 -0 0"/>
+    <parent link="link8"/>
+    <child link="link11"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <joint name="joint_6_mimic_R1" type="revolute">
+    <origin xyz="-0.0125 0.00395 -0.0551744" rpy="1.5708 1.5708 0"/>
+    <parent link="link5"/>
+    <child link="link8"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <origin xyz="4.226e-09 -0.06165 0.019075" rpy="-1.5708 1.5708 0"/>
+    <parent link="link4"/>
+    <child link="link5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <origin xyz="-0 -0.1235 -0" rpy="0 -0 0"/>
+    <parent link="link3"/>
+    <child link="link4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.74533" upper="1.5708"/>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <origin xyz="-2.23277e-05 -0.1525 0.005544" rpy="-0 -0 0"/>
+    <parent link="link2"/>
+    <child link="link3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-2.0944" upper="1.5708"/>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <origin xyz="0.0245004 0.0002 -0.0458276" rpy="1.5579e-08 -1.5708 0"/>
+    <parent link="link1"/>
+    <child link="link2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="2.00713"/>
+  </joint>
+  <joint name="joint_1" type="revolute">
+    <origin xyz="0.0155 -0.0002 0.059" rpy="-3.14159 -0 -1.5708"/>
+    <parent link="link0"/>
+    <child link="link1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.1415" upper="3.1415"/>
+  </joint>
+</robot>
