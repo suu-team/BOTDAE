@@ -169,6 +169,10 @@ while robot.step(timestep) != -1:
     depth_array_cv = np.array(depth_image, dtype=np.float32)
     max_range = depth_sensor.getMaxRange() 
 
+    # 🌟 [추가된 코드] 무한대나 이상한 값을 0 ~ max_range 사이로 예쁘게 잘라내기! (파이썬 달래주기)
+    depth_array_cv = np.clip(depth_array_cv, 0, max_range)
+
+    # 이제 파이썬이 투덜거리지 않고 예쁘게 0~255로 변환함!
     depth_visual = (depth_array_cv / max_range * 255).astype(np.uint8)
     
     cv2.imshow("Depth Camera View", depth_visual)
